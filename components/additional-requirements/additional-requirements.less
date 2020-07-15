@@ -1,0 +1,187 @@
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+}
+
+.additional-requirements {
+
+}
+.additional-requirements__label {
+  display: block;
+  width: 275px;
+  text-align: right;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.additional-requirements__label {
+  position: relative;
+
+
+
+}
+.additional-requirements__label::before {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: '+';
+  width: 14px;
+  height: 14px;
+  //background-image: url("../../img/plus.png");
+  background-size: 120% 120%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 2px;
+  right: -32px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.additional-requirements__label::after {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 2px;
+  background: lightgrey;
+  top: 9px;
+  right: -16px
+}
+.additional-requirements__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+
+}
+.additional-requirements__list::after {
+
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 115%;
+  background: lightgrey;
+  top: -15px;
+  left: 298px;
+}
+.additional-requirements__list-item {
+  display: flex;
+  justify-content: flex-start;
+  width: 600px;
+  margin-bottom: 10px;
+}
+
+
+
+.languages__list-item--span,
+.instruments__list-item--span,
+.additional-requirements__list-item--span {
+  position: relative;
+  width: 250px;
+  text-align: right;
+}
+
+.languages__list-item--span::before,
+.instruments__list-item--span::before,
+.additional-requirements__list-item--span::before {
+  position: absolute;
+  content: '';
+  width: 32px;
+  height: 2px;
+  background: lightgrey;
+  top: 8px;
+  left: 62px;
+}
+
+.languages__list-item--key,
+.instruments__list-item--key,
+.additional-requirements__list-item--key {
+  text-align: right;
+  width: 274px;
+}
+
+.additional-requirements input + label + .additional-requirements__list{
+  display: none;
+}
+
+.additional-requirements input:checked + label + .additional-requirements__list {
+  display: block;
+}
+.additional-requirements input:checked + label::before {
+  //background-image: url("../../../src/img/minus.png");
+  content: '-';
+  background-size: 100% 100%;
+
+}
+
+.instruments__list,
+.languages__list {
+  margin: 0;
+  padding: 0;
+
+}
+
+
+
+input:checked + label + .languages__list {
+  display: block;
+}
+input:checked + label::before {
+  //background-image: url("../../../src/img/minus.png");
+  content: '-';
+  background-size: 100% 100%;
+
+}
+.languages__label,
+.instruments__label {
+  font-weight: 400;
+}
+
+.languages input:checked + label::before,
+.instruments input:checked + label::before {
+  top: 2px;
+  right: -68px;
+}
+.languages input:checked + label::after,
+.instruments input:checked + label::after {
+  width: 28px;
+  top: 9px;
+  right: -52px;
+}
+
+
+.instruments__list,
+.languages__list {
+  position: relative;
+  display: none;
+
+}
+.instruments__list::before ,
+.languages__list::before {
+  position: absolute;
+  content: '';
+  background: lightgrey;
+}
+.languages__input:checked + label + .languages__list::before,
+.instruments__input:checked + label + .instruments__list::before {
+  top: -15px;
+  left: 334px;
+  width: 2px;
+  height: 53px;
+}
+.languages__input:checked + label + .languages__list::before {
+  height: 25px;
+}
+
+.languages__input:checked + label + .languages__list,
+.instruments__input:checked + label + .instruments__list {
+  display: block;
+}
